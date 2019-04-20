@@ -18,3 +18,14 @@ git log --oneline --decorate
 echo 'D-C2' > test.txt
 git commit -a -m 'D-C2'
 git log --oneline --decorate
+git checkout next_release
+echo 'NR-C1' >> test.txt
+git commit -a -m 'NR-C1'
+echo 'NR-C2' >> test.txt
+git commit -a -m 'NR-C2'
+git checkout master
+git merge next_release
+git log --oneline --decorate --graph --all
+git checkout development
+echo 'D-C3' >> test.txt
+git commit -a -m 'D-C3'
