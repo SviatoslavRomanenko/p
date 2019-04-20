@@ -1,0 +1,20 @@
+git clone https://github.com/SviatoslavRomanenko/p.git
+echo 'C1' > test.txt
+git status
+git add test.txt
+git status
+git add .gitignore
+git status -s
+git commit -m 'C'
+git push origin master
+git branch next_release
+git branch development
+git log --oneline --decorate
+git checkout development
+git log --oneline --decorate
+echo 'D-C1' > test.txt
+git commit -a -m 'D-C1'
+git log --oneline --decorate
+echo 'D-C2' > test.txt
+git commit -a -m 'D-C2'
+git log --oneline --decorate
